@@ -116,7 +116,7 @@ namespace Plugin
         private void BasicScenario(CefBrowserWrapperBase cefBrowserWrapper, bool devMode)
         {
             // Скролл
-            cefBrowserWrapper.Scroll(100);
+            cefBrowserWrapper.Scroll();
             DebugAlert("Push Enter to continue", cefBrowserWrapper, devMode);
 
             // Скролл к элементу

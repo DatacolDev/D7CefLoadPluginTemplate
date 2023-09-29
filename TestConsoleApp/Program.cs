@@ -62,9 +62,10 @@ namespace TestConsoleApp
             parameters.Add("nestinglevel", 0);
             parameters.Add("referer", "");
 
-            CefBrowserWrapperFactoryBase factory = new UniCefBrowserWrapperFactory(showBrowser);
-            CefBrowserWrapperBase cefBrowserWrapper = factory.Create(true, true, 10000, false, 
-                new SingleBrowserInfo("", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"));
+            CefBrowserWrapperFactoryBase factory = new UniCefBrowserWrapperFactory(showBrowser, false);
+            CefBrowserWrapperBase cefBrowserWrapper = factory.Create(true, true, true, 10000, false,
+                new SingleBrowserInfo("", "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.45 Safari/537.36"
+                ));
             parameters.Add("cef_browser_wrapper", cefBrowserWrapper);
 
             try
